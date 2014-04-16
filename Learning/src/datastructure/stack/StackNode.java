@@ -1,10 +1,10 @@
 package datastructure.stack;
 
-public class StackNode {
-	int data;
-	StackNode next;	
+public class StackNode<T> {
+	T data;
+	StackNode<T> next;	
 	
-	public StackNode(int x){
+	public StackNode(T x){
 		this.data = x;
 		this.next = null;
 	}

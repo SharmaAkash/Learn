@@ -1,13 +1,23 @@
 package datastructure.tree;
 
-public class BTreeNode extends TreeNode{
+import java.util.ArrayList;
 
-	BTreeNode left;
-	BTreeNode right;
+public class BTreeNode<T> extends TreeNode<T>{
+
+	BTreeNode<T> left;
+	BTreeNode<T> right;
+    T val;
     
+    public BTreeNode(T data){
+    	this.left = null;
+    	this.right = null;
+    	this.val = data;
+    }
 	
-    public void addChild(BTreeNode x, BTreeNode y) {    	
+    public void addChild(BTreeNode<T> x, BTreeNode<T> y) {    	
     	super.addChild(x);
     	super.addChild(y);
     }
+    
+   
 }

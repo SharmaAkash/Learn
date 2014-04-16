@@ -1,10 +1,10 @@
 package datastructure.stack;
 
-public class MinStackNode extends StackNode {
+public class MinStackNode<T> extends StackNode<T> {
     
-	int minValue;
+	T minValue;
 	
-	public MinStackNode(int x) {
+	public MinStackNode(T x) {
 		super(x);
 		this.minValue = x;		
 	}

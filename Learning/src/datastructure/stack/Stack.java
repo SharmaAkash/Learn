@@ -1,14 +1,14 @@
 package datastructure.stack;
 
-public class Stack {
-   StackNode top;
+public class Stack<T> {
+   StackNode<T> top;
    
-   public Stack(StackNode n){
+   public Stack(StackNode<T> n){
 	  top = n;
 	  top.next = null;
    }
    
-   public void push(StackNode n){
+   public void push(StackNode<T> n){
 	   if(top == null)
 	   {
 		   top = n;
@@ -20,15 +20,15 @@ public class Stack {
 	   }
    }
    
-   public StackNode pop()
+   public StackNode<T> pop()
    {
-	   StackNode poppedNode = top;
+	   StackNode<T> poppedNode = top;
 	   top = top.next;
 	   return poppedNode;
    }
    
    public void printStack(){
-	   StackNode n = top;
+	   StackNode<T> n = top;
 	   while(n!=null){
 		   System.out.println(n.data);
 		   n = n.next;
